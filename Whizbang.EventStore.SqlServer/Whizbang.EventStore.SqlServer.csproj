@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0;net45;net451;net452;net46;net461;net471;net472</TargetFrameworks>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>mscorlib@live.com</Authors>
+        <PackageIcon>Whizbang.png</PackageIcon>
+        <PackageProjectUrl>https://github.com/mscorlib/Whizbang.EventStore.SqlServer</PackageProjectUrl>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Whizbang.Core" Version="1.0.0" />
+    </ItemGroup>
+    
+    <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' ">
+        <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+        <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+        <Reference Include="System.configuration" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net451'">
+        <Reference Include="System.configuration" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(TargetFramework)' == 'net452'">
+        <Reference Include="System.configuration" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net46'">
+        <Reference Include="System.configuration" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
+        <Reference Include="System.configuration" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net471'">
+        <Reference Include="System.configuration" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
+        <Reference Include="System.configuration" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <None Include="..\Whizbang.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
+</Project>
